@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <form action="dream_create.php" method="POST">
+    <form action="dream_ajax.php" method="POST">
         <fieldset>
             <legend>夢（入力画面）</legend>
             <a href="dream_read.php">夢一覧</a>
-            <a href="calendar.php">夢日記</a>
+            <a href="dream_daiary.php">夢日記</a>
             <div>
                 日付「起きた日」: <input type="date" name="deadline">
             </div>

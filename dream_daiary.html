@@ -12,10 +12,11 @@
     <button id="next" type="button">次の月</button>
     <form action="dream_ajax.php" method="POST">
         <input type="text" name="day" id="day">
-
-        <div id="calendar"></div>
+        <div>
+            <button>submit</button>
+        </div>
     </form>
-
+    <div id="calendar"></div>
 
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -118,10 +119,9 @@
             if (e.target.classList.contains("calendar_td")) {
                 alert('クリックした日付は' + e.target.dataset.date + 'です')
                 // // send.phpにおくりたいデータをjSON形式で書く
-                localStorage.setItem('day', e.target.dataset.date)
-                const day = document.getElementById('day').value = e.target.dataset.date;
+
+                document.getElementById('day').value = e.target.dataset.date;
             }
-            window.location.href = 'dream_ajax.php';
         })
 
         showCalendar(year, month)

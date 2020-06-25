@@ -1,19 +1,14 @@
 <?php
-var_dump($_POST);
-exit();
-
-
-// $day = $_POST['day']; //ポストで受け取れる
-// echo ($day);
-// 何らかの処理をする・・・
-
-// exit;
-
-
 
 
 // DB接続の設定
 // DB名は`gsacf_x00_00`にする
+if (
+
+    !isset($_POST['day']) || $_POST['day'] == ''
+) {
+    exit('ParamError');
+}
 $dbn = 'mysql:dbname=gsf_d06_db12;charset=utf8;port=3306;host=localhost';
 $user = 'root';
 $pwd = '';
